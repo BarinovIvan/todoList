@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: 0;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+}
+
+.container{
+    max-width: 1440px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+button {
+    padding: 20px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}

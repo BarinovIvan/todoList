@@ -1,10 +1,10 @@
 <template>
   <div class="header">
     <div class="container">
-      <div class="header__logo">LOGO</div>
+      <router-link to = "/" class="header__logo">LOGO</router-link>
       <nav>
-        <a href="/">List Todos</a>
-        <a href="/">Create todo</a>
+        <router-link to="/">Todos</router-link>
+        <router-link to="/ContactsList">Contact us</router-link>
       </nav>
     </div>
   </div>

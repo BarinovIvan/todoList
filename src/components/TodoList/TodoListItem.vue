@@ -3,30 +3,28 @@
     <div class="todo__id">
       {{ todo.id }}
     </div>
-    <div :class="['todo__title', {'stroke':todo.completed }]">
+    <div :class="['todo__title', { 'stroke':todo.completed }]">
       {{ todo.title }}
     </div>
     <input
-        type = "checkbox"
+        type="checkbox"
         :checked="todo.completed"
-        @click = "$emit('change-completion', todo.id)"
+        @click="todo.completed = !todo.completed"
     />
-    <button
-      @click = "$emit('delete-todo', todo.id)"
-    >X</button>
+    <button @click="$emit('delete-todo', todo.id)">X</button>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'TodoListItem',
-  props: {
-    todo: {
-      type: Object,
-      required: true
+  export default {
+    name: 'TodoListItem',
+    props: {
+      todo: {
+        type: Object,
+        required: true
+      }
     }
   }
-}
 </script>
 
 <style scoped lang="scss">
