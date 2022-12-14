@@ -20,9 +20,3 @@ body {
     width: 95%;
     margin: 0 auto;
 }
-
-button {
-    padding: 20px 40px;
-    border-radius: 5px;
-    cursor: pointer;
-}

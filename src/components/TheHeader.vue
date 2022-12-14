@@ -1,10 +1,10 @@
 <template>
   <div class="header">
     <div class="container">
-      <router-link to = "/" class="header__logo">LOGO</router-link>
+      <router-link to="/" class="header__logo">LOGO</router-link>
       <nav>
         <router-link to="/">Todos</router-link>
-        <router-link to="/ContactsList">Contact us</router-link>
+        <router-link to="/contacts-list">Contact us</router-link>
       </nav>
     </div>
   </div>
@@ -16,23 +16,23 @@
   }
 </script>
 
-<style scoped lang="scss">
-.header {
-  color: white;
-  background: black;
+<style lang="scss" scoped>
+  .header {
+    color: white;
+    background: black;
 
-  .container {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
+    .container {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
   }
-}
 
-nav > *:not(:last-child) {
-  margin-right: 20px;
-}
+  nav > *:not(:last-child) {
+    margin-right: 20px;
+  }
 
-a {
-  color: white;
-}
+  a {
+    color: white;
+  }
 </style>

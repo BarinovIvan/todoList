@@ -6,7 +6,7 @@
 
 <script>
   import TodoList from "@/components/TodoList/index.vue";
-  import AppDialog from "@/components/AppDialog";
+  import AppDialog from "@/components/ui/AppDialog.vue";
 
   export default {
     name: 'HomeView',

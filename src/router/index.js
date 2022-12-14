@@ -10,7 +10,7 @@ const routes = [
     component: () => import('@/views/HomeView.vue')
   },
     {
-    path: '/ContactsList',
+    path: '/contacts-list',
     name: 'ContactsList',
     component: () => import('@/views/ContactsList.vue')
   }
@@ -23,4 +23,3 @@ const router = new VueRouter({
 })
 
 export default router
-
