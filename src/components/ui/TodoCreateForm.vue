@@ -13,32 +13,31 @@
 </template>
 
 <script>
-import AppButton from "@/components/ui/AppButton.vue";
-import AppTextField from "@/components/ui/AppTextField.vue";
+  import AppButton from "@/components/ui/AppButton.vue";
+  import AppTextField from "@/components/ui/AppTextField.vue";
 
-export default {
-  name: "TodoCreateForm",
-  components: { AppButton, AppTextField },
-  data() {
-    return {
-      inputTodoTitle: ''
-    }
-  },
-  methods: {
-
-    addNewTodo() {
-      if(this.inputTodoTitle == '') {
-        return
+  export default {
+    name: "TodoCreateForm",
+    components: { AppButton, AppTextField },
+    data() {
+      return {
+        inputTodoTitle: ''
       }
-      this.$emit('added-todo',{
-        id: Date.now(),
-        title: this.inputTodoTitle,
-        completed: false
-      })
-      this.inputTodoTitle = ''
+    },
+    methods: {
+      addNewTodo() {
+        if(this.inputTodoTitle == '') {
+          return
+        }
+        this.$emit('added-todo', {
+          id: Date.now(),
+          title: this.inputTodoTitle,
+          completed: false
+        })
+        this.inputTodoTitle = ''
+      }
     }
   }
-}
 </script>
 
 <style lang="scss" scoped>

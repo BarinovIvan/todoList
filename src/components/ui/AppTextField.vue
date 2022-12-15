@@ -3,7 +3,8 @@
       :type="type"
       :value="value"
       placeholder="Купить хлеб"
-      @input="$emit('input', $event.target.value)"/>
+      @input="$emit('input', $event.target.value)"
+  />
 </template>
 
 <script>

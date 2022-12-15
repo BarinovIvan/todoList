@@ -1,17 +1,17 @@
 <template>
   <div :class="['dialog', { 'active':value }]" @click="$emit('input',false)">
     <div class="dialog__wrapper" @click.stop>
-      <close-button class="dialog__close" @click="$emit('input',false)" label="X" />
+      <button-close class="dialog__close" @click="$emit('input',false)" />
       <slot />
     </div>
   </div>
 </template>
 
 <script>
-  import CloseButton from "@/components/ui/CloseButton.vue";
+  import ButtonClose from "@/components/ui/ButtonClose.vue";
   export default {
     name: 'AppDialog',
-    components: { CloseButton },
+    components: { ButtonClose },
     props: {
       value: {
         type: Boolean,

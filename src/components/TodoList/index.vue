@@ -15,7 +15,7 @@
     </div>
     <app-dialog v-model="dialogIsShown" class="todo__dialog">
       <todo-delete-form
-          v-if="DeleteFormIsShown"
+          v-if="deleteFormIsShown"
           @clickCloseTodo="closeTodoDialog()"
           @clickDeleteTodo="deleteTodo()"
       />
@@ -39,7 +39,13 @@
 
   export default {
     name: 'TodoList',
-    components: { TodoCreateForm, AppButton, TodoDeleteForm, AppDialog, TodoListItem },
+    components: {
+      TodoCreateForm,
+      AppButton,
+      TodoDeleteForm,
+      AppDialog,
+      TodoListItem
+    },
     data() {
       return {
         dialogIsShown: false,
@@ -82,8 +88,8 @@
       }
     },
     computed: {
-      DeleteFormIsShown() {
-        if (this.dialogName == dialogNames.DELETE) return true
+      deleteFormIsShown() {
+        return this.dialogName === dialogNames.DELETE;
       }
     }
   }

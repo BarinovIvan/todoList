@@ -11,16 +11,17 @@
         :checked="todo.completed"
         @click="todo.completed = !todo.completed"
     />
-    <close-button @click="$emit('delete-todo', todo.id)" title="X" />
+    <button-close @click="$emit('delete-todo', todo.id)" />
   </div>
 </template>
 
 <script>
   import AppButton from "@/components/ui/AppButton.vue";
-  import CloseButton from "@/components/ui/CloseButton.vue";
+  import ButtonClose from "@/components/ui/ButtonClose.vue";
+
   export default {
     name: 'TodoListItem',
-    components: { CloseButton, AppButton },
+    components: { ButtonClose, AppButton },
     props: {
       todo: {
         type: Object,

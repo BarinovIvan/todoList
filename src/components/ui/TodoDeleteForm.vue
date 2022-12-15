@@ -7,11 +7,11 @@
 </template>
 
 <script>
-import AppButton from "@/components/ui/AppButton.vue";
-export default {
-  name: "TodoDeleteForm",
-  components: { AppButton }
-}
+  import AppButton from "@/components/ui/AppButton.vue";
+  export default {
+    name: "TodoDeleteForm",
+    components: { AppButton }
+  }
 </script>
 
 <style lang="scss" scoped>
